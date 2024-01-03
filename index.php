@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("views/header.php");
 
 include("views/navbar.php");
@@ -14,10 +13,10 @@ include("views/navbar.php");
             </p>
         </div>
         <div class="text-center col-12 p-5">
-            <button class="btn btn-success btn-lg">Entrar na conta</button>
+            <a href="views/login.php" class="btn btn-success btn-lg">Entrar na conta</a>
             <br>
             <br>
-            <button class="btn btn-success btn-lg">Criar uma conta</button>
+            <a href="views/cadastro.php" class="btn btn-success btn-lg">Criar uma conta</a>
         </div>
 
     </div>

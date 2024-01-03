@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+
+#texto-digitado {
+    overflow: hidden;
+    border-right: .15em solid orange; /* simula o cursor de digitação */
+    animation: typing 2s steps(40, end), blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
