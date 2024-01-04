@@ -25,7 +25,7 @@ include("navbar.php");
             </div>
             <div class="form-group">
                 <label for="input2">Senha:</label>
-                <input name="senha" required type="password" maxlength="300" class="form-control" id="input2">
+                <input name="senha" required type="password" maxlength="50" class="form-control" id="input2">
             </div>
             <div class="form-group">
                 <label for="input3">Eu sou:</label>
