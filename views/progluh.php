@@ -3,15 +3,18 @@ session_start();
 
 include("header.php");
 
-
 if ($_SESSION["logado"] == true) {
     if ($_SESSION["tipo"] == "Professor") {
+        include("../models/navbarprofessor.php");
+        include("../models/offcanvasprofessor.php");
+
+
+        echo ("<div class='container-fluid p-5'>");
 
         echo "Bem-vindo! @" . $_SESSION['nick'];
 
-        
-        include("../models/offcanvasprofessor.php");
-    } else if($_SESSION["tipo"] == "Aluno"){
+        echo ("</div>");
+    } else if ($_SESSION["tipo"] == "Aluno") {
         echo "Bem-vindo! @" . $_SESSION['nick'];
         echo "<button class='btn btn-primary' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight'>Toggle right offcanvas</button>";
         include("../models/offcanvasprofessor.php");
