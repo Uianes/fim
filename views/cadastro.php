@@ -20,7 +20,7 @@ include("navbar.php");
         <form method="POST" action="../controllers/cadastroUser.php">
             <div class="form-group">
                 <label for="input1">E-mail:</label>
-                <input name="nome" required type="email" maxlength="300" class="form-control" id="input1"
+                <input name="email" required type="email" maxlength="300" class="form-control" id="input1"
                     placeholder="nome@exemplo.com">
             </div>
             <div class="form-group">
