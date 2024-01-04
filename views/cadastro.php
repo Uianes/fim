@@ -5,7 +5,7 @@ include("navbar.php");
 ?>
 <div class="container-fluid">
     <div class="h1 container-fluid d-flex justify-content-center align-items-center" style="height: 50vh;">
-        <img class="img-fluid" width="30%" src="../assets/lu1.png" alt="Menina programadora negra em estilo robótico">
+        <img class="img-fluid" width="20%" src="../assets/lu1.png" alt="Menina programadora negra em estilo robótico">
         <div class="row">
             <div class="col-12">
                 <p id="texto-digitado" class="p-5"></p>
@@ -17,15 +17,15 @@ include("navbar.php");
     </div>
 
     <div class="m-2" id="formhidden" hidden>
-        <form method="GET" action="../controllers/login.php">
+        <form method="POST" action="../controllers/cadastroUser.php">
             <div class="form-group">
                 <label for="input1">E-mail:</label>
-                <input name="nome" required type="email" class="form-control" id="input1"
+                <input name="nome" required type="email" maxlength="300" class="form-control" id="input1"
                     placeholder="nome@exemplo.com">
             </div>
             <div class="form-group">
                 <label for="input2">Senha:</label>
-                <input name="senha" required type="password" class="form-control" id="input2">
+                <input name="senha" required type="password" maxlength="300" class="form-control" id="input2">
             </div>
             <div class="form-group">
                 <label for="input3">Eu sou:</label>
@@ -40,7 +40,7 @@ include("navbar.php");
             </div>
             <div class="form-group">
                 <label for="input5">Minha cidade:</label>
-                <input name="cidade" required type="textt" class="form-control" id="input5">
+                <input name="cidade" required type="text" class="form-control" id="input5">
             </div>
             <div class="form-group">
                 <label for="input6">Estado</label>
