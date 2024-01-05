@@ -18,7 +18,7 @@ if ($_SESSION["logado"] == true) {
 <div class='container-fluid p-5'>
     <div class="row">
         <div class="col-12">
-            <form method="GET" action="../controllers/cadastroClasses.php">
+            <form method="POST" action="../controllers/cadastroClasses.php">
                 <div class="form-group">
                     <label for="input1">Nome da Turma:</label>
                     <input name="nome_class" required type="text" maxlength="300" class="form-control" id="input1">
@@ -67,7 +67,7 @@ if ($_SESSION["logado"] == true) {
                         for ($l = 0; $l < 4; $l++) {
                             echo ("
                                 <div class='form-check form-switch'>
-                                    <input class='form-check-input' type='checkbox' id='$i$j$l' value='$i$j$l'>
+                                    <input class='form-check-input' type='checkbox' id='$i$j$l' name='$i$j$l' value='true'>
                                     <label class='form-check-label' for='$i$j$l'>$eixos[$j]: $estruturas[$l]</label>
                                     <a href='../views/questoes/.php' class='btn'><i class='bi bi-eye'></i></a>
                                 </div>
@@ -75,7 +75,7 @@ if ($_SESSION["logado"] == true) {
                         }
                     }
                 }
-                echo "<input type='text' name='id_user' value='".$_SESSION['id_user']."' hidden disabled>";
+                echo "<input type='text' name='id_user' value='".$_SESSION['id']."' hidden>";
                 ?>
                 <div class="form-group text-center pt-2">
                     <button class="btn btn-success btn-lg" type="submit">Enviar</button>

@@ -5,7 +5,7 @@
     </div>
     <div class="offcanvas-body pt-5">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item p-4"><a href='' class='h2' style='text-decoration:none;'><i class="bi bi-journal-plus"></i> Cadastrar uma
+            <li class="list-group-item p-4"><a href='../views/cadastroClasses.php' class='h2' style='text-decoration:none;'><i class="bi bi-journal-plus"></i> Cadastrar uma
                     turma</a></li>
             <li class="list-group-item p-4"><a href='' class='h2' style='text-decoration:none;'><i class="bi bi-pencil"></i> Gerenciar uma turma</a>
             </li>

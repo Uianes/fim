@@ -1,4 +1,4 @@
-<footer style="position: fixed; bottom: 0; width: 100vw" class="bg-body-tertiary text-center text-lg-start">
+<footer style="position: fixed; bottom: 0; width: 100%" class="bg-body-tertiary text-center text-lg-start">
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
         <br>
         <div class="row container-fluid d-flex justify-content-center align-items-center small">

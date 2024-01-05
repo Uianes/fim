@@ -12,3 +12,4 @@
 
 - `Funcionalidade 01:`: No arquivo views/login.php, adicionar aviso sobre o tamanho dos campos no front, e também sobre o required e sobre o UNIQUE em nick_user.
 - `Funcionalidade 02:`: No arquivo controllers/login.php, adicioanr um aviso funcional de erro no Login.
+- `Funcionalidade 03:`: Construir o carregamento das turmas para o aluno.
