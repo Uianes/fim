@@ -16,3 +16,4 @@
 - `Funcionalidade 04:`: Construir página de gerenciamento de turma.
 - `Funcionalidade 05:`: Construir página de gerenciamento do perfil.
 - `Funcionalidade 06:`: Construir página de relatórios (individual e da turma).
+- `Funcionalidade 07:`: Adicionar a base de dados aqui.
