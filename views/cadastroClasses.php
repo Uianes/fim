@@ -69,7 +69,7 @@ if ($_SESSION["logado"] == true) {
                                 <div class='form-check form-switch'>
                                     <input class='form-check-input' type='checkbox' id='$i$j$l' name='$i$j$l' value='true'>
                                     <label class='form-check-label' for='$i$j$l'>$eixos[$j]: $estruturas[$l]</label>
-                                    <a href='../views/questoes/.php' class='btn'><i class='bi bi-eye'></i></a>
+                                    <a href='../views/questoes/$i$j$l/1.html' class='btn'><i class='bi bi-eye'></i></a>
                                 </div>
                                 ");
                         }

@@ -1,6 +1,5 @@
 <?php
 include("header.php");
-
 include("navbar.php");
 ?>
 <div class="container-fluid">
@@ -15,7 +14,6 @@ include("navbar.php");
             </div>
         </div>
     </div>
-
     <div class="m-2" id="formhidden" hidden>
         <form method="POST" action="../controllers/cadastroUser.php">
             <div class="form-group">
@@ -103,9 +101,6 @@ include("navbar.php");
         </form>
     </div>
 </div>
-
-
-
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const textoInicial = "Saudações! Eu sou a </Luh!> <br> <br> Vou te guiar no início desta aventura!";
@@ -113,11 +108,9 @@ include("navbar.php");
         let index = 0;
         const textoDigitado = document.getElementById("texto-digitado");
         const btnEntendi = document.getElementById("btn-entendi");
-
         function hiddenForm() {
             document.getElementById("formhidden").removeAttribute("hidden");
         }
-
         function type(texto, element) {
             if (index < texto.length) {
                 element.textContent += texto.charAt(index);
@@ -130,21 +123,15 @@ include("navbar.php");
             } else if (index == 76) {
                 document.getElementById("btn-entendi").removeAttribute("hidden");
             }
-
         }
-
         btnEntendi.addEventListener("click", function () {
             textoDigitado.textContent = "";
             index = 0;
             type(texto2, textoDigitado);
         });
-
         type(textoInicial, textoDigitado);
     });
 </script>
-
-
-
 <?php
 include("footer.php");
 ?>

@@ -17,3 +17,4 @@
 - `Funcionalidade 05:`: Construir página de gerenciamento do perfil.
 - `Funcionalidade 06:`: Construir página de relatórios (individual e da turma).
 - `Funcionalidade 07:`: Adicionar a base de dados aqui.
+- `Funcionalidade 08:`: Gravar feedback no Banco de Dados.
