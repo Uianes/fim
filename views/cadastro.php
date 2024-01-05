@@ -75,6 +75,28 @@ include("navbar.php");
                 </select>
             </div>
             <br>
+            <div class="form-group">
+                <label for="input7">Ano de nascimento:</label>
+                <input name="ano_nascimento" required type="number" min="1940" max="<?php echo "" . date("Y"); ?>" class="form-control" id="input7">
+            </div>
+            <div class="form-group">
+                <label for="input8">Gênero</label>
+                <select class="form-control" required id="input8" name="genero">
+                    <option>Mulher cisgênero</option>
+                    <option>Mulher transgênero</option>
+                    <option>Homem cisgênero</option>
+                    <option>Homem transgênero</option>
+                    <option>Gênero não-binário</option>
+                    <option>Agênero</option>
+                    <option>Gênero-fluido</option>
+                    <option>Bigênero</option>
+                    <option>Mulher transexual</option>
+                    <option>Homem transexual</option>
+                    <option>Poligênero</option>
+                    <option>Gênero neutro</option>
+                </select>
+            </div>
+            <br>
             <div class="form-group text-center pt-2">
                 <button class="btn btn-success btn-lg" type="submit">Enviar</button>
             </div>
