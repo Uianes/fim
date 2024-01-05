@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 include("header.php");
-
 if ($_SESSION["logado"] == true) {
     if ($_SESSION["tipo"] == "Professor") {
         include("../models/navbarprofessor.php");
@@ -20,5 +18,4 @@ if ($_SESSION["logado"] == true) {
     header("Location: login.php");
 }
 include("footer.php");
-
 ?>

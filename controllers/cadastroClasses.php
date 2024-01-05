@@ -13,14 +13,12 @@ for ($i = 0; $i < 16; $i++) {
         }
     }
 }
-
 $conteudos = json_encode($conteudos);
 if(is_numeric(($_SESSION['id']))){
     $id = $_SESSION['id'];
 } else {
     $id = $_POST['id_user'];
 }
-
 $sql = "INSERT INTO `classes`(`nome_class`, `ano`, `conteudos_class`, `id_user`) VALUES ('".$nome."','".$ano."','".$conteudos."','".$id."')";
 if (mysqli_query($conn, $sql)) {
     mysqli_close($conn);
@@ -30,5 +28,4 @@ if (mysqli_query($conn, $sql)) {
     echo "Erro ao inserir os dados na plataforma: " . $sql . "<br> Erro: " . mysqli_error($conn);
     mysqli_close($conn);
 }
-
 ?>
