@@ -45,7 +45,7 @@ if ($_SESSION["logado"] == true) {
             echo ("<a class='mt-5 btn btn-outline-danger btn-lg' href='../views/questoes/".$_SESSION['licao']."/1.html' role='button'>Por favor, tente novamente!</a>
             </div>");
         } else{
-            echo ("<a class='mt-5 btn btn-outline-success btn-lg' href='../views/progluh.php' role='button'>Lição concluída! Parabéns!</a>
+            echo ("<a class='mt-5 btn btn-outline-success btn-lg' href='gravar.php' role='button'>Lição concluída! Parabéns!</a>
             </div>");
         }
 } else {
