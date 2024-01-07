@@ -40,8 +40,14 @@ if ($_SESSION["logado"] == true) {
                 </div>
             </div>
         </div>
-        <a class='mt-5 btn btn-outline-success btn-lg' href='../views/progluh.php' role='button'>Entendido!</a>
-    </div>");
+        ");
+        if($_SESSION['erros'] >= $_SESSION['acertos']){
+            echo ("<a class='mt-5 btn btn-outline-danger btn-lg' href='../views/questoes/".$_SESSION['licao']."/1.html' role='button'>Por favor, tente novamente!</a>
+            </div>");
+        } else{
+            echo ("<a class='mt-5 btn btn-outline-success btn-lg' href='../views/progluh.php' role='button'>Lição concluída! Parabéns!</a>
+            </div>");
+        }
 } else {
     echo "<script>alert('Erro no login! Por favor, tente novamente')</script>";
     header("Location: login.php");

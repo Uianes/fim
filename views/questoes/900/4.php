@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['fim'] = date('d/m/Y H:i');
+$_SESSION['licao'] = 900;
 if (isset($_POST['resposta'])) {
     $valorRecebido = $_POST['resposta'];
 
@@ -54,7 +55,7 @@ if (isset($_POST['resposta'])) {
                                 </p>    
                             </div>
                         </div>
-                        <a class='mt-5 btn btn-outline-success btn-lg' href='4.html' role='button'>Próxima</a>
+                        <a class='mt-5 btn btn-outline-success btn-lg' href='../../../models/feedback.php' role='button'>Próxima</a>
                 </div>
             </div>
             ";
