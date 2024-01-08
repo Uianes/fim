@@ -19,3 +19,4 @@
 - `Funcionalidade 07:`: Adicionar a base de dados aqui.
 - `Funcionalidade 08:`: Adicionar sistema de pontuação nas atividades.
 - `Funcionalidade 09:`: Adicionar direcionamento para quando o aluno estiver logado, ao receber o feedback possa voltar para a  página da turma.
+- `Funcionalidade 10:`: Adicionar a opção de excluir a turma cadastrada.

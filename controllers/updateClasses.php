@@ -19,7 +19,8 @@ if(is_numeric(($_SESSION['id']))){
 } else {
     $id = $_POST['id_user'];
 }
-$sql = "INSERT INTO `classes`(`nome_class`, `ano`, `conteudos_class`, `id_user`) VALUES ('".$nome."','".$ano."','".$conteudos."','".$id."')";
+$sql = "UPDATE `classes` SET `nome_class`='".$nome."',`ano`='".$ano."',`conteudos_class`='".$conteudos."' WHERE `id_class`='".$_SESSION['turma']."';";
+
 if (mysqli_query($conn, $sql)) {
     mysqli_close($conn);
     header('Location: ../views/progluh.php');

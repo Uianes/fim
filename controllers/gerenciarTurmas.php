@@ -17,9 +17,8 @@ if ($_SESSION["logado"] == true) {
         echo "<br><h5>Relatório da turma <i class='bi bi-file-bar-graph'></i></h5>";
         echo "<hr><h2>Configurações da turma</h2>";
         include("carregarConfigs.php");
-        //include("../controllers/carregarTurmas.php");
         echo "<hr><h2>Lista de alunos da turma</h2>";
-        
+        include("listarAlunos.php");
         echo ("</div>");
     }
 } else {

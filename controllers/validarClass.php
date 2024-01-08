@@ -6,7 +6,9 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_assoc($result)) {
     $_SESSION['turma'] = $row["id_class"];
-    $_SESSION['nome_turma'] = $row['nome_class'];
+    $_SESSION['nometurma'] = $row['nome_class'];
+    $_SESSION['anoturma'] = $row['ano'];
+    $_SESSION['conteudos'] = $row['conteudos_class'];
     mysqli_close($conn);
   }
 } else {
