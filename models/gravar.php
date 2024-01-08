@@ -1,11 +1,15 @@
 <?php
 session_start();
 include("../controllers/conexao.php");
-
-$sql = "INSERT INTO `lessons`(`id_user`, `id_atividade`, `cod_turma`, `data_inicio`, `data_fim`, `pontuação`, `acertos`, `erros`)
- VALUES ('".$_SESSION['id']."','".$_SESSION['licao']."','3','".$_SESSION['inicio']."','".$_SESSION['fim']."','".$_SESSION['pontuaca']."','".$_SESSION['acertos']."','".$_SESSION['erros']."')";
+$sql = "INSERT INTO `lessons`(`id_user`, `id_atividade`, `cod_turma`, `pontuação`, `acertos`, `erros`, `data_inicio`, `data_fim`) 
+VALUES ('".$_SESSION['id']."','".$_SESSION['licao']."','3','".$_SESSION['pontuacao']."','".$_SESSION['acertos']."','".$_SESSION['erros']."','".$_SESSION['inicio']."','".$_SESSION['fim']."')";
 if (mysqli_query($conn, $sql)) {
-    echo "Dados registrados com sucesso!";
+    if($_SESSION['tipo'] == "Professor"){
+        header("Location: ../views/progluh.php");
+    } else {
+        //Aqui colocar para voltar pra a lista de todas as atividades.
+        header("Location: ../views/progluh.php");
+    }
 } else {
     echo "Erro ao inserir os dados na plataforma: " . $sql . "<br> Erro: " . mysqli_error($conn);
 }
