@@ -1,6 +1,5 @@
 <?php
 include("header.php");
-
 include("navbar.php");
 ?>
 <div class="container-fluid">
@@ -12,7 +11,6 @@ include("navbar.php");
             </div>
         </div>
     </div>
-
     <div class="m-2" id="formhidden" hidden>
         <form method="POST" action="../controllers/loginUser.php">
             <div class="form-group">
@@ -30,21 +28,14 @@ include("navbar.php");
         </form>
     </div>
 </div>
-
-
-
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const textoInicial = "Saudações! Eu sou a </Luh!> <br> <br> É bom te ver novamente!";
-        console.log(textoInicial.length);
         let index = 0;
         const textoDigitado = document.getElementById("texto-digitado");
-
         function hiddenForm() {
             document.getElementById("formhidden").removeAttribute("hidden");
         }
-
-
         function type(texto, element) {
             if (index < texto.length) {
                 element.textContent += texto.charAt(index);
@@ -58,9 +49,6 @@ include("navbar.php");
         type(textoInicial, textoDigitado);
     });
 </script>
-
-
-
 <?php
 include("footerpage.php");
 include("footer.php");

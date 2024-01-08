@@ -1,18 +1,5 @@
-<?php
-session_start();
-include("header.php");
-if ($_SESSION["logado"] == true) {
-    if ($_SESSION["tipo"] == "Professor") {
-        include("../models/navbarprofessor.php");
-        include("../models/offcanvasprofessor.php");
-    } else {
-        header("Location: ../index.php");
-    }
-} else {
-    header("Location: ../index.php");
-}
-?>
-<div class='container-fluid p-5'>
+
+<div class='container-fluid p-2'>
     <div class="row">
         <div class="col-12">
             <form method="POST" action="../controllers/cadastroClasses.php">
@@ -72,11 +59,9 @@ if ($_SESSION["logado"] == true) {
                 echo "<input type='text' name='id_user' value='" . $_SESSION['id'] . "' hidden>";
                 ?>
                 <div class="form-group text-center pt-2">
-                    <button class="btn btn-success btn-lg" type="submit">Enviar</button>
+                    <button class="btn btn-success btn-lg" type="submit">Salvar atualizações</button>
                 </div>
             </form>
         </div>
     </div>
-    <?php
-    include("footer.php");
-    ?>
+</div>
