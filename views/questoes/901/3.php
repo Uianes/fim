@@ -2,10 +2,9 @@
 session_start();
 
 
-if (isset($_POST['palavraClicada'])) {
-    $valorRecebido = $_POST['palavraClicada'];
+if (isset($_POST['resposta'])) {
 
-    if ($valorRecebido == "i" || $valorRecebido == "i:") {
+    if ($_POST['resposta'] == "certo") {
             $_SESSION['pontuacao'] += 10;
             $_SESSION['acertos'] += 1;
             echo "
@@ -50,9 +49,13 @@ if (isset($_POST['palavraClicada'])) {
                             <div class='col-md-6 col-12'>
                                 <p>Você errou a questão!
                                 <br>
-                                    Um contador é uma variável utilizada para controlar um fluxo.
-                                    Nesse exemplo, a variável i recebe um valor inicial (1) e fará com que a repetição ocorrá até que o valor de i seja igual a 10.
-                                </p>    
+                                A instrução REPEAT UNTIL é utilizada, naquele algoritmo, para inidicar uma repetição com um número definido de execuções.
+                                <br>
+                                Essa instrução recebe o nome, em Português, de REPITA ATÉ.
+                                <br>
+                                Em PASCAL, o bloco REPEAT UNTIL inicia em 'repeat' e termina no 'until (condição)'.
+                                <br>
+                                Repare que o teste lógico fica no fim da estrutura. E diferente das demais, o uso e 'begin' e 'end' é opcional.</p>    
                             </div>
                         </div>
                         <a class='mt-5 btn btn-outline-success btn-lg' href='4.html' role='button'>Próxima</a>

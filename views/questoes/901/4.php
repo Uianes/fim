@@ -1,13 +1,13 @@
 <?php
 session_start();
 $_SESSION['fim'] = date('d/m/Y H:i');
-$_SESSION['licao'] = 900;
+$_SESSION['licao'] = 901;
 if (isset($_POST['resposta'])) {
     $valorRecebido = $_POST['resposta'];
     if ($valorRecebido == "certo") {
-            $_SESSION['pontuacao'] += 10;
-            $_SESSION['acertos'] += 1;
-            echo "
+        $_SESSION['pontuacao'] += 10;
+        $_SESSION['acertos'] += 1;
+        echo "
             <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
             <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css'>
             <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
@@ -29,7 +29,6 @@ if (isset($_POST['resposta'])) {
                 </div>
             </div>
             ";
-
     } else {
         $_SESSION['erros'] += 1;
         echo "
@@ -49,8 +48,12 @@ if (isset($_POST['resposta'])) {
                             <div class='col-md-6 col-12'>
                                 <p>Você errou a questão!
                                 <br>
-                                    Um contador é uma variável utilizada para controlar um fluxo.
-                                    Neste caso, o laço FOR/PARA utiliza um número definido de iterações, portanto, ele necessita de pelo menos uma variável de controle (contadora).
+                                A estrutura FOR é uma repetição com número definido de repetições, em português chamada de PARA.
+                                <br>
+                                A estrutura WHILE é uma repetição com número indefinido de repetições e com teste lógico no início, em português chamada de ENQUANTO.
+                                <br>
+                                A estrutura REPEAT é uma repetição com número indefinido de repetições e com teste lógico no fim, em português chamada de REPITA.
+                                <br>
                                 </p>    
                             </div>
                         </div>
