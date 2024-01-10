@@ -2,10 +2,9 @@
 session_start();
 
 
-if (isset($_POST['palavraClicada'])) {
-    $valorRecebido = $_POST['palavraClicada'];
+if (isset($_POST['resposta'])) {
 
-    if ($valorRecebido == "for") {
+    if ($_POST['resposta'] == "certo") {
             $_SESSION['pontuacao'] += 10;
             $_SESSION['acertos'] += 1;
             echo "
@@ -50,9 +49,13 @@ if (isset($_POST['palavraClicada'])) {
                             <div class='col-md-6 col-12'>
                                 <p>Você errou a questão!
                                 <br>
-                                A instrução FOR é utilizada, naquele algoritmo, para inidicar uma repetição com um número definido de execuções.
+                                A instrução WHILE é utilizada, naquele algoritmo, para inidicar uma repetição com um número definido de execuções.
                                 <br>
-                                Essa instrução recebe o nome, em Português, de PARA</p>    
+                                Essa instrução recebe o nome, em Português, de ENQUANTO.
+                                <br>
+                                Em PASCAL, assim como no FOR/PARA, o bloco do WHILE inicia em 'begin' e termina no 'end'.
+                                <br>
+                                Repare que o teste lógico fica no início da estrutura, fazendo parte da sua declaração: while i <= 10 do</p>    
                             </div>
                         </div>
                         <a class='mt-5 btn btn-outline-success btn-lg' href='3.html' role='button'>Próxima</a>

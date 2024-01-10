@@ -67,7 +67,7 @@ if (isset($_POST['resposta'])) {
 } else {
     echo "<script>
     alert('Erro! Nenhum valor recebido!');
-    window.location.href = 'index.html';
+    window.location.href = '1.html';
     </script>";
 }
 ?>

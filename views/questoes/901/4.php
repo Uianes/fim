@@ -4,7 +4,6 @@ $_SESSION['fim'] = date('d/m/Y H:i');
 $_SESSION['licao'] = 900;
 if (isset($_POST['resposta'])) {
     $valorRecebido = $_POST['resposta'];
-
     if ($valorRecebido == "certo") {
             $_SESSION['pontuacao'] += 10;
             $_SESSION['acertos'] += 1;

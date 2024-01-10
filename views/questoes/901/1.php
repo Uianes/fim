@@ -1,11 +1,12 @@
 <?php
 session_start();
-
-
-if (isset($_POST['palavraClicada'])) {
-    $valorRecebido = $_POST['palavraClicada'];
-
-    if ($valorRecebido == "for") {
+$_SESSION['pontuacao'] = 0;
+$_SESSION['acertos'] = 0;
+$_SESSION['erros'] = 0;
+$_SESSION['inicio'] = date('d/m/Y H:i');
+if (isset($_POST['resposta'])) {
+    $valorRecebido = $_POST['resposta'];
+    if ($valorRecebido == "certo") {
             $_SESSION['pontuacao'] += 10;
             $_SESSION['acertos'] += 1;
             echo "
@@ -26,11 +27,10 @@ if (isset($_POST['palavraClicada'])) {
                                 <p>Você acertou a questão!</p>    
                             </div>
                         </div>
-                        <a class='mt-5 btn btn-outline-success btn-lg' href='3.html' role='button'>Próxima</a>
+                        <a class='mt-5 btn btn-outline-success btn-lg' href='2.html' role='button'>Próxima</a>
                 </div>
             </div>
             ";
-
     } else {
         $_SESSION['erros'] += 1;
         echo "
@@ -50,12 +50,11 @@ if (isset($_POST['palavraClicada'])) {
                             <div class='col-md-6 col-12'>
                                 <p>Você errou a questão!
                                 <br>
-                                A instrução FOR é utilizada, naquele algoritmo, para inidicar uma repetição com um número definido de execuções.
-                                <br>
-                                Essa instrução recebe o nome, em Português, de PARA</p>    
+                                Um bloco de código, em PASCAL, compreende toda a estrutura que estiver entre um 'Begin' e um 'End'.
+                                </p>    
                             </div>
                         </div>
-                        <a class='mt-5 btn btn-outline-success btn-lg' href='3.html' role='button'>Próxima</a>
+                        <a class='mt-5 btn btn-outline-success btn-lg' href='2.html' role='button'>Próxima</a>
                 </div>
             </div>
             ";
