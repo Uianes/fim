@@ -63,7 +63,7 @@ if (isset($_POST['palavraClicada'])) {
 } else {
     echo "<script>
     alert('Erro! Nenhum valor recebido!');
-    window.location.href = '1.html';
+    window.location.href = '2.html';
     </script>";
 }
 ?>
