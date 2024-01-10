@@ -1,0 +1,41 @@
+<script>
+const texto = "Clique no código que abre o bloco de comandos neste código:"
+const op = [
+"Program Soma;",
+"uses CRT;",
+"VAR",
+"resultado, n1, n2 : Integer;",
+"Begin",
+"Writeln('Algoritmo que realiza a soma de dois números inteiros');",
+"Writeln('Informe o primeiro valor:');",
+"Readln(n1);",
+"Writeln('Informe o segundo valor:');",
+"Readln(n2);",
+"resultado := n1+n2;",
+"Writeln('Soma:', resultado);",
+"End."
+]
+document.write(`<div id="q2">
+<h1>${texto}</h1>
+<br>
+<div class="p-md-3 d-grid">`)
+for(var i=0; i < op.length; i++){
+    document.write(`
+        <div class="input-group">
+                <button
+                type="submit"
+                id='${i+1}'
+                name="bll1a1q2"
+                class="form-control btn btn-outline-secondary"
+                value='${op[i]}'>
+                ${op[i]}
+                </button>
+        </div>`)}
+document.write(`
+<br>
+<br>
+    </div>
+</div>
+`)
+
+</script>

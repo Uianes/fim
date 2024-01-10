@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="estiloquestoes.css">
+
+<script>
+const texto = "Ordene os blocos:"
+const op = [
+"End.",
+"Begin",
+"Writeln('Olá!');",
+"Program Hello;"
+]
+
+document.write(`
+    <h1>${texto}</h1>
+                        <br>
+                        <div class="row px-5">
+                            <div class="box col-3 bg-success text-light" draggable="true" id="box-a"><span
+                                    style="font-size: 18px;">${op[0]}</span>
+                            </div>
+                            <br>
+                            <div class="w-100"></div>
+                            <div class="box col-3 bg-success text-light" draggable="true" id="box-b"><span
+                                    style="font-size: 18px;">${op[1]}</span>
+                            </div>
+                            <br>
+                            <div class="w-100"></div>
+                            <div class="box col-3 bg-success text-light" draggable="true" id="box-c">
+                                <span style="font-size: 18px;">${op[2]}</span>
+                            </div>
+                            <br>
+                            <div class="w-100"></div>
+                            <div class="box col-3 bg-success text-light" draggable="true" id="box-d"><span
+                                    style="font-size: 18px;">${op[3]}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <input type="text" value="" id="q6" name="bll1a1q6" hidden/>
+                        <button type="button" onclick="getID()" class="btn btn-lg btn-success">Enviar</button>
+`)
+function getID(){
+    var ID = [] 
+    var ids = document.body.getElementsByTagName('div')
+    for (var i = 0; i < ids.length; i++){
+        ID.push(ids[i].id)
+    }
+    if(ID[1] == "box-d" && ID[3] == "box-b" && ID[5] == "box-c" && ID[7] == "box-a") {
+        document.getElementById('q6').value = "Certo"
+        document.getElementById('form').submit()
+    }
+    else {
+        document.getElementById('q6').value = "Errado"
+        document.getElementById('form').submit()
+    }
+    
+}
+</script>
+<script src="dragn'drop.js"></script>

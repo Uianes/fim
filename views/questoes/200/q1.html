@@ -1,0 +1,25 @@
+<script>
+const texto = "Qual comando que inicia um Bloco de Comandos?"
+const op = ["Began", "Begin", "Start"]
+const data = new Date()
+document.cookie = `r1-tempo=${data.getDate()}`
+document.write(`<div id="q1">
+<h1>${texto}</h1>
+<br>
+<div class="p-md-3 d-grid gap-3">`)
+for(var i=0; i < op.length; i++){
+    document.write(`
+        <div class="input-group">
+                <label class="input-group-text" for="${i+1}">${i+1}</label>
+                <button
+                type="submit"
+                name="bll1a1q1"
+                id='${i+1}'
+                value='${op[i]}'
+                class="form-control btn btn-outline-success btn-lg">${op[i]}</button>
+        </div>`)}
+document.write(`
+    </div>
+</div>
+`)
+</script>

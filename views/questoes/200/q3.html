@@ -1,0 +1,40 @@
+<script>
+const texto = "Preencha com a abertura do Bloco:"
+const op = [
+"Program Soma;",
+"uses CRT;",
+"VAR",
+"resultado, n1, n2 : Integer;",
+"Writeln('Algoritmo que realiza a soma de dois números inteiros');",
+"Writeln('Informe o primeiro valor:');",
+"Readln(n1);",
+"Writeln('Informe o segundo valor:');",
+"Readln(n2);",
+"resultado := n1+n2;",
+"Writeln('Soma: ', resultado);",
+"End."
+]
+
+document.write(`<div id="q3">
+<h1>${texto}</h1>
+<br>
+<div class="p-md-3 d-grid gap-3">`)
+for(var i=0; i < op.length; i++){
+    if(i == 3){
+        document.write(`<div class="input-group">
+        <input type='text' name='bll1a1q3'/>
+        </div>`);
+    }
+    document.write(`
+        <span>
+               ${op[i]}
+        </span>`)}
+document.write(`
+                <button
+                type="submit"
+                class="form-control btn btn-outline-success btn-lg">Enviar</button>
+    </div>
+</div>
+`)
+
+</script>

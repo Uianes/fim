@@ -1,0 +1,33 @@
+<script>
+const texto = "Todo bloco precisa de um fechamento."
+const op = [
+"Verdadeiro",
+"Falso"
+]
+const cor = [
+    "success",
+    "danger"
+]
+
+document.write(`<div id="q5">
+<h1>${texto}</h1>
+<br>
+<div class="p-md-3 d-grid gap-3">`)
+for(var i=0; i < op.length; i++){
+    document.write(`
+        <div class="input-group">
+                <button
+                type="submit"
+                name="bll1a1q5"
+                id='${i+1}'
+                value="${op[i]}"
+                class="form-control btn btn-outline-${cor[i]}">
+                ${op[i]}
+                </button>
+        </div>`)}
+document.write(`
+    </div>
+</div>
+`)
+
+</script>
